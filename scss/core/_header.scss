@@ -1,14 +1,58 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 2.5em 0 2.9em;
+	background: #F2F2F2;
+
+	@media (min-width: 768px) {
+		padding: 3.5em 0;
+	}
 
 	&__content {
 		@extend .container_center;
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+	}
+
+	&__left {
+		@media (max-width: 767px) {
+			margin-bottom: 2.6em;
+		}
+	}
+
+	&__right {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		@media (min-width: 768px) {
+			max-width: 39.95em;
+		}
+
+		a {
+			text-transform: uppercase;
+			font-weight: 550;
+			text-decoration: none;
+			color: #000;
+			letter-spacing: 0.1em;
+
+			@media (min-width: 768px) {
+				font-size: 1.25em;
+			}
+
+			i {
+				display: inline-block;
+				margin-left: 0.7em;
+				font-size: 0.9em;
+			}
+		}
 	}
 }
 

@@ -13,12 +13,783 @@
 @import 'core/reset';
 @import 'core/template';
 @import 'core/header';
-@import 'core/navbar';
-@import 'core/footer';
+// @import 'core/navbar';
+// @import 'core/footer';
 @import 'core/form';
-@import 'core/grid';
-@import 'core/soc';
-@import 'core/breadcrumb';
-@import 'core/pagination';
+// @import 'core/grid';
+// @import 'core/soc';
+// @import 'core/breadcrumb';
+// @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
+@import "vendor/slick";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?xjg4o9");
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?xjg4o9#iefix") format('embedded-opentype'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?xjg4o9") format('truetype'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?xjg4o9") format('woff'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?xjg4o9##{$icomoon-font-family}") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon_"],
+[class*=" icon_"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_whatsapp {
+    &:before {
+        content: $icon_whatsapp;
+    }
+}
+
+.icon_mail {
+    &:before {
+        content: $icon_mail;
+    }
+}
+
+.icon_phone {
+    &:before {
+        content: $icon_phone;
+    }
+}
+
+.icon_prev {
+    &:before {
+        content: $icon_prev;
+    }
+}
+
+.icon_next {
+    &:before {
+        content: $icon_next;
+    }
+}
+
+.icon_link {
+    &:before {
+        content: $icon_link;
+    }
+}
+
+@font-face {
+    font-family: 'Sverdlovsk';
+    src: url("../fonts/SverdlovskRegular.woff2") format('woff2'), url("../fonts/SverdlovskRegular.woff") format('woff'), url("../fonts/SverdlovskRegular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.logo {
+    width: 9.5625em;
+    display: inline-block;
+
+    @media (min-width: 768px) {
+        width: 13.0625em;
+    }
+
+    img {
+        height: auto;
+    }
+}
+
+.home {
+    &__top {
+        background: #F2F2F2;
+        padding: 0 0 3em;
+
+        @media (min-width: 768px) {
+            padding: 1.75em 0 7.5625em;
+        }
+
+        .container_center {
+            position: relative;
+            z-index: 1;
+
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            max-width: 59.61em;
+            padding-top: 12.15em;
+            margin-right: -1.9em;
+        }
+    }
+
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 2em;
+        letter-spacing: 0.03em;
+        color: #1A1A1A;
+        margin: 0 0 1.5em;
+
+        @media (min-width: 768px) {
+            font-size: 5em;
+            margin: 0 0.4em 0.6em 0;
+        }
+    }
+
+    &__lg {
+        font-family: 'Sverdlovsk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8.125em;
+        line-height: 0.9;
+        letter-spacing: 0.02em;
+        color: #D1D1D1;
+        margin-left: -0.16em;
+
+        @media (min-width: 768px) {
+            font-size: 23.75em;
+            margin-left: 0;
+            padding-right: 0.07em;
+        }
+    }
+
+    &__pict {
+        position: relative;
+        z-index: -1;
+        margin: -4.2em -1em 0;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            margin: 0;
+            width: 57.6em;
+            top: 0;
+            left: 0.7em;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 2.625em 0 0;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+            line-height: 1.375;
+            max-width: 15.94em;
+            margin: 2.8em 2.9em 0 0;
+
+        }
+    }
+
+}
+
+.section {
+    &__title {}
+
+}
+
+.container_center {}
+
+.about {
+    padding: 3.7em 0 0;
+
+    @media (min-width: 768px) {
+        border-bottom: 1px solid #C0C0C0;
+        padding: 9.74em 7.875em 9.76em;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__text {
+        line-height: 1.5;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+            line-height: 1.375;
+            margin: 0.5em -7em 0 0;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        &::first-letter {
+            font-size: 3.82em;
+            line-height: 0.44;
+            font-family: 'Sverdlovsk';
+
+            @media (min-width: 768px) {
+                font-size: 3.125em;
+            }
+        }
+
+        p {
+            margin: 0 0 1.4em;
+
+            @media (min-width: 768px) {
+                margin: 0.7em 0;
+            }
+        }
+    }
+
+    &__pict {
+        margin: 3em -1em 0;
+
+        @media (min-width: 768px) {
+            margin: 0;
+            width: 49.25em;
+            flex: none;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.cases {
+    padding: 3.75em 0 0;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        padding: 7.375em 0;
+    }
+
+    .container_center {
+        position: relative;
+    }
+
+    &__title {
+        font-family: 'Sverdlovsk';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0.9;
+        font-size: 8.5625em;
+        letter-spacing: 0.02em;
+        color: #51575A;
+        opacity: 0.2;
+        margin: 0 0 -0.29em;
+
+        @media (min-width: 768px) {
+            font-size: 31.25em;
+            margin: 0 0 -0.29em 0.26em;
+        }
+    }
+
+    &__slider {
+        margin: 0 0 0 -1em;
+
+        @media (min-width: 768px) {
+            margin: 0 3.5em 0 -5.875em;
+        }
+
+        .slick-list {
+            overflow: inherit;
+        }
+
+        .slick-track {}
+
+        .slick-arrow {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            color: #000;
+            cursor: pointer;
+            transition: 0.4s;
+            transition-property: opacity, color;
+            z-index: 5;
+
+            @media (min-width: 768px) {
+                top: -8.9em;
+                bottom: auto;
+            }
+
+            &:before {
+                font-size: 4.3em;
+
+                @media (min-width: 768px) {
+                    font-size: 5.1em;
+                }
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &.slick-disabled {
+                opacity: 1;
+                color: #D9D9D9;
+                cursor: default;
+            }
+        }
+
+        .slick-prev {
+            right: 6.8em;
+
+            @media (min-width: 768px) {
+                right: 10.7em;
+            }
+        }
+    }
+
+    &__item {
+        margin: 0 1.25em 5.1em 0;
+        opacity: 0.6;
+        transition: opacity 0.4s;
+        padding: 0 1em;
+
+        @media (min-width: 768px) {
+            margin: 0;
+            padding: 0 0 0 5.875em;
+            opacity: 0.7;
+        }
+
+        &.slick-active {
+            opacity: 1;
+        }
+    }
+
+    &__video {
+        // border: 1px solid #000;
+        margin: 0 -1em 1.4em;
+
+        @media (min-width: 768px) {
+            margin: 0 0 3.625em;
+        }
+    }
+
+    &__label {
+        color: #000;
+        margin-bottom: 0.6em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.35em;
+            font-size: 2em;
+        }
+    }
+
+    &__name {
+        color: #000;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+
+        @media (min-width: 768px) {
+            font-size: 3em;
+            margin-bottom: 0.85em;
+        }
+    }
+
+    &__autor {
+        @media (min-width: 768px) {
+            font-size: 2em;
+        }
+    }
+
+}
+
+.catalog {
+    overflow: hidden;
+    padding: 1.52em 0 0;
+
+    @media (min-width: 768px) {
+        padding: 6em 0 0;
+    }
+
+    &__content {
+        margin-bottom: 2.35em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            margin-bottom: 8.0625em;
+        }
+    }
+
+    &__pict {
+
+        @media (min-width: 768px) {
+            width: 48.69em;
+            margin-right: -6.625em;
+            flex: none;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__right {
+        padding-top: 3.1em;
+
+        @media (min-width: 768px) {
+            padding-top: 7.6em;
+        }
+    }
+
+    &__title {
+        font-family: 'Roboto';
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        line-height: 1.5;
+        margin: 0 0 1.5em;
+
+        @media (min-width: 768px) {
+            margin: 0 0 0.9em;
+            line-height: 1.33;
+            font-size: 3em;
+            letter-spacing: 0.003em;
+        }
+
+        &:first-letter {
+            font-family: 'Sverdlovsk';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 3.75em;
+            line-height: 0.64;
+
+            @media (min-width: 768px) {
+                font-size: 2.08em;
+            }
+        }
+    }
+
+    &__text {
+        letter-spacing: 0.05em;
+        margin-bottom: 3.1em;
+        line-height: 1.5;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+            margin-bottom: 3.3em;
+            line-height: 1.38;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            margin: 1.5em 0;
+
+            @media (min-width: 768px) {
+                margin: 1.3em 0;
+            }
+        }
+    }
+
+    &__action {
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 8.6em;
+        }
+
+        .btn {
+            margin: 0 0 1.45em;
+            width: 100%;
+            max-width: 25em;
+
+            @media (min-width: 768px) {
+                width: auto;
+                max-width: none;
+                margin: 0 2.6em 0 0;
+            }
+        }
+    }
+
+    &__slider {
+        padding-bottom: 6.75em;
+        margin-right: 1.7em;
+
+        @media (min-width: 768px) {
+            padding-bottom: 20.5625em;
+            margin-right: 0;
+            // margin-right: 1em;
+        }
+
+        .slick-list {
+            overflow: inherit;
+        }
+
+        .slick-arrow {
+            position: absolute;
+            right: -1.5em;
+            bottom: 2.05em;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            color: #000;
+            cursor: pointer;
+            transition: 0.4s;
+            transition-property: opacity, color;
+            z-index: 5;
+
+            @media (min-width: 768px) {
+                right: 0;
+                bottom: 12.5em;
+            }
+
+            &:before {
+                font-size: 4.3em;
+
+                @media (min-width: 768px) {
+                    font-size: 5.1em;
+                }
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &.slick-disabled {
+                opacity: 1;
+                color: #D9D9D9;
+                cursor: default;
+            }
+        }
+
+        .slick-prev {
+            right: 5em;
+
+            @media (min-width: 768px) {
+                right: 10.7em;
+            }
+        }
+    }
+
+    &__item {
+        margin-right: 1.5em;
+
+        @media (min-width: 768px) {
+            margin-right: 6.5em;
+        }
+    }
+
+    &__img {
+        margin-bottom: 2.2em;
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__info {
+        font-size: 1em;
+
+        @media (min-width: 768px) {
+            font-size: 1.375em;
+        }
+    }
+
+    &__name {
+        margin-bottom: 0.8em;
+        display: flex;
+        align-items: center;
+    }
+
+    &__rate {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.36em;
+            width: 1.085em;
+            height: auto;
+            flex: none;
+        }
+    }
+
+    &__city {
+        margin-bottom: 1.7em;
+    }
+
+    &__cat {
+        color: #000;
+        margin-bottom: 0.8em;
+    }
+
+    &__link {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid;
+
+        i {
+            font-size: 0.9em;
+            padding-left: 0.9em;
+            color: #ccc;
+        }
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+
+}
+
+.contact {
+    padding: 0;
+
+    @media (min-width: 768px) {
+        padding: 0 0 13.5em;
+        overflow: hidden;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        margin: auto;
+        max-width: 100.4375em;
+        border-top: 1px solid #C0C0C0;
+        margin-bottom: 3.95em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 9em;
+        }
+    }
+
+    .container_center {
+        @media (min-width: 768px) {
+            padding-left: 9.3em;
+        }
+    }
+
+    &__title {
+        font-family: 'Sverdlovsk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.75em;
+        line-height: 0.85;
+        letter-spacing: 0.02em;
+        color: #B7B7B7;
+        margin: 0 0 0.95em;
+
+        @media (min-width: 768px) {
+            font-size: 9.375em;
+            margin: 0 0 0.55em;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1.15em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 3.65em;
+        }
+
+        a {
+            font-size: 1.5em;
+            color: #666666;
+            text-decoration: none;
+            margin-right: 1em;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.45em;
+
+            @media (min-width: 768px) {
+                font-size: 2em;
+                margin-right: 3em;
+            }
+
+            i {
+                margin-right: 0.9em;
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    &__content {
+        background: #F2F2F2;
+        margin: 0 -1em;
+
+        @media (min-width: 768px) {
+            margin: 0;
+            display: flex;
+            position: relative;
+
+            &:after {
+                content: '';
+                background: #F2F2F2;
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 30em;
+                right: -30em;
+            }
+        }
+    }
+
+    &__img {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            flex: none;
+            width: 40.36em;
+            margin: 0 0 0 -8.6em;
+            padding: 6.375em 0;
+        }
+    }
+
+    &__form {
+        padding: 1.9em 1em 4em;
+
+        @media (min-width: 768px) {
+            padding: 11.7em 7.9em 10.2em 10.6em;
+        }
+
+        .btn {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                max-width: 12.3em;
+            }
+        }
+    }
+
+}
+
+.form {
+    &__row {}
+
+    &__info {}
+
+    &__action {}
+
+}

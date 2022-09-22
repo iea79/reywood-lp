@@ -3,7 +3,8 @@
 body {
 	display: flex;
 	flex-direction: column;
-	font-size: calc(.034 * 100vw + 0px);
+	font-size: 16px;
+	font-weight: 300;
 	height: auto;
 	min-height: 100%;
 	// color: $color_withe;
@@ -21,6 +22,10 @@ body {
 
 	@media (min-width: 1600px) {}
 
+}
+
+picture {
+	display: block;
 }
 
 .wrapper {

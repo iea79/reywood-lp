@@ -4,32 +4,194 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Document</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css?0.1"/>
   </head>
   <body>
     <header class="header">
       <div class="header__content">
-        <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-        <nav class="header__right">
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="">Page1</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="">Page2</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="">Page3</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="">Page4</a></li>
-          </ul>
-        </nav>
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+        <div class="header__right"><a href="" target="_blank">Каталог<i class="icon_link"></i></a><a href="" target="_blank">связаться</a></div>
       </div>
     </header>
     <main class="main_content">
-      <div class="container_center"></div>
+      <!-- begin home-->
+      <section class="home section" id="home">
+        <div class="home__top">
+          <div class="container_center">
+            <div class="home__content">
+              <h1 class="home__title">Посуда для ресторанов</h1>
+              <div class="home__lg">Другая.</div>
+              <picture class="home__pict">
+                <source srcset="img/home-mob.jpg" media="(max-width: 767px)"/><img src="img/home.png" alt=""/>
+              </picture>
+              <div class="home__text">Та, что подойдет вам на уровне идеологии. Дополнит и усилит ее. Встроится в ДНК вашей концепции. Станет органичной частью маркетинга.</div>
+            </div>
+          </div>
+        </div>
+        <!-- begin about-->
+        <div class="container_center">
+          <div class="about">
+            <div class="about__text">
+              <p>Мы работаем с лучшими и знаем, что вам нужно.</p>
+              <p>Мы наполним пространство вашего ресторана лучшей посудой из возможных.</p>
+            </div>
+            <picture class="about__pict"><img src="img/about.jpg" alt=""/></picture>
+          </div>
+        </div>
+        <!-- end about    -->
+      </section>
+      <!-- end home-->
+      <!-- begin cases-->
+      <section class="cases section" id="cases">
+        <div class="container_center">
+          <h2 class="cases__title">кейсы</h2>
+          <div class="cases__slider">
+            <div class="cases__item">
+              <div class="cases__video">
+                <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+              </div>
+              <div class="cases__label">Ресторан</div>
+              <div class="cases__name">Матрешка</div>
+              <div class="cases__autor">Шеф повар Влад Пискунов</div>
+            </div>
+            <div class="cases__item">
+              <div class="cases__video">
+                <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+              </div>
+              <div class="cases__label">Ресторан</div>
+              <div class="cases__name">Кафе-Пушкинъ</div>
+              <div class="cases__autor">Шеф повар Андрей Махов</div>
+            </div>
+            <div class="cases__item">
+              <div class="cases__video">
+                <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
+              </div>
+              <div class="cases__label">Ресторан</div>
+              <div class="cases__name">Кафе-Пушкинъ</div>
+              <div class="cases__autor">Шеф повар Андрей Махов</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end cases-->
+      <!-- begin catalog-->
+      <section class="catalog section" id="catalog">
+        <div class="container_center">
+          <div class="catalog__content">
+            <picture class="catalog__pict"><img src="img/story.jpg" alt=""/></picture>
+            <div class="catalog__right">
+              <h2 class="catalog__title">Лицо ресторана – это не только интерьер и меню</h2>
+              <div class="catalog__text">
+                <p>Впечатляйте ваших гостей звуками, запахами, подачей. И они запомнят вас. Сделают фото и поделятся с друзьями.</p>
+                <p>А наша задача сделать так, чтобы сомнений, где это фото сделано не оставалось.</p>
+              </div>
+              <div class="catalog__action"><a class="btn" href="#">Перейти в каталог <i class="icon_link"></i></a><a class="btn btn_border" href="#">Бесплатный подбор</a></div>
+            </div>
+          </div>
+          <!-- begin catalog__slider-->
+          <div class="catalog__slider">
+            <div class="catalog__item">
+              <div class="catalog__img"><img src="img/cat.jpg" alt=""/></div>
+              <div class="catalog__info">
+                <div class="catalog__name">Ресторан Le Faham 
+                  <div class="catalog__rate"><img src="img/like.png" alt=""/><img src="img/like.png" alt=""/></div>
+                </div>
+                <div class="catalog__city">Париж</div>
+                <div class="catalog__cat">Посуда Degrenne — </div><a class="catalog__link" href="#" target="_blank">L White Dewdrops<i class="icon_link"></i></a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__img"><img src="img/cat.jpg" alt=""/></div>
+              <div class="catalog__info">
+                <div class="catalog__name">Ресторан Le Faham 
+                  <div class="catalog__rate"><img src="img/like.png" alt=""/><img src="img/like.png" alt=""/></div>
+                </div>
+                <div class="catalog__city">Париж</div>
+                <div class="catalog__cat">Посуда Degrenne — </div><a class="catalog__link" href="#" target="_blank">L White Dewdrops<i class="icon_link"></i></a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__img"><img src="img/cat.jpg" alt=""/></div>
+              <div class="catalog__info">
+                <div class="catalog__name">Ресторан Le Faham 
+                  <div class="catalog__rate"><img src="img/like.png" alt=""/><img src="img/like.png" alt=""/></div>
+                </div>
+                <div class="catalog__city">Париж</div>
+                <div class="catalog__cat">Посуда Degrenne — </div><a class="catalog__link" href="#" target="_blank">L White Dewdrops<i class="icon_link"></i></a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__img"><img src="img/cat.jpg" alt=""/></div>
+              <div class="catalog__info">
+                <div class="catalog__name">Ресторан Le Faham 
+                  <div class="catalog__rate"><img src="img/like.png" alt=""/><img src="img/like.png" alt=""/></div>
+                </div>
+                <div class="catalog__city">Париж</div>
+                <div class="catalog__cat">Посуда Degrenne — </div><a class="catalog__link" href="#" target="_blank">L White Dewdrops<i class="icon_link"></i></a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__img"><img src="img/cat.jpg" alt=""/></div>
+              <div class="catalog__info">
+                <div class="catalog__name">Ресторан Le Faham 
+                  <div class="catalog__rate"><img src="img/like.png" alt=""/><img src="img/like.png" alt=""/></div>
+                </div>
+                <div class="catalog__city">Париж</div>
+                <div class="catalog__cat">Посуда Degrenne — </div><a class="catalog__link" href="#" target="_blank">L White Dewdrops<i class="icon_link"></i></a>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__img"><img src="img/cat.jpg" alt=""/></div>
+              <div class="catalog__info">
+                <div class="catalog__name">Ресторан Le Faham 
+                  <div class="catalog__rate"><img src="img/like.png" alt=""/><img src="img/like.png" alt=""/></div>
+                </div>
+                <div class="catalog__city">Париж</div>
+                <div class="catalog__cat">Посуда Degrenne — </div><a class="catalog__link" href="#" target="_blank">L White Dewdrops<i class="icon_link"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- end catalog__slider-->
+        </div>
+      </section>
+      <!-- end catalog-->
+      <!-- begin contact-->
+      <section class="contact section" id="contact">
+        <div class="container_center">
+          <h2 class="contact__title">связаться</h2>
+          <div class="contact__link"><a href="tel: +7 (495) 111-23-44"><i class="icon_phone"> </i>+7 (495) 111-23-44</a><a href="mailto: mail@mail.com"><i class="icon_mail"> </i>mail@mail.com</a><a href="https://wa.me/74951112344"><i class="icon_whatsapp"></i>Watsapp</a></div>
+          <div class="contact__content">
+            <div class="contact__img"><img src="img/contact.jpg" alt=""/></div>
+            <div class="contact__form">
+              <form class="form" action="">
+                <div class="form__row">
+                  <input type="text" placeholder="Имя"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="E-mail"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Телефон"/>
+                </div>
+                <div class="form__row">
+                  <textarea placeholder="Сообщение"></textarea>
+                </div>
+                <div class="form__info">Нажимая на кнопку  «Отправить»,  я даю свое согласие на обработку персональных данных</div>
+                <div class="form__action">
+                  <button class="btn" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end contact-->
     </main>
-    <footer class="footer">
-      <div class="footer__content">
-        <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
-      </div>
-    </footer>
     <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/function.js?0.1"></script>
   </body>
 </html>

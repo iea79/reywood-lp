@@ -1,12 +1,12 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
-$second_font_family: "Arial";
-$main_color: #000;
+$main_font_family: 'Roboto', sans-serif;
+$second_font_family: "Sverdlovsk";
+$main_color: #666666;
 $main_line_height: 1.2;
 $main_font_size: 16px;
 
-$container_width: 80em;
+$container_width: 101.21em;
 
 $footer_height: auto;
 
@@ -70,3 +70,13 @@ $btn_default_text_color: $main_color;
 $btn_contrast_text_color: $color_withe;
 $btn_default_bg_color_hover: darken($btn_default_bg_color, 7%);
 $btn_default_bg_color_active: darken($btn_default_bg_color, 10%);
+
+$icomoon-font-family: "rewood" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon_link: "\e905";
+$icon_whatsapp: "\e900";
+$icon_mail: "\e901";
+$icon_phone: "\e902";
+$icon_prev: "\e903";
+$icon_next: "\e904";

@@ -1,4 +1,115 @@
 extends layout/layout.pug
 
 block content
-    .container_center
+    // begin home
+    section#home.home.section
+        .home__top
+            .container_center
+                .home__content
+                    h1.home__title Посуда для ресторанов
+                    .home__lg Другая.
+                    picture.home__pict
+                        source(srcset="img/home-mob.jpg" media="(max-width: 767px)")
+                        img(src="img/home.png" alt="")
+                    .home__text Та, что подойдет вам на уровне идеологии. Дополнит и усилит ее. Встроится в ДНК вашей концепции. Станет органичной частью маркетинга.
+
+
+        // begin about
+        .container_center
+            .about
+                .about__text
+                    p Мы работаем с лучшими и знаем, что вам нужно.
+                    p Мы наполним пространство вашего ресторана лучшей посудой из возможных.
+                picture.about__pict
+                    img(src="img/about.jpg" alt="")
+
+        // end about    
+
+
+    // end home
+
+    // begin cases
+    section#cases.cases.section
+        .container_center
+            h2.cases__title кейсы
+            .cases__slider
+                each slide in [{name: 'Матрешка', autor: 'Шеф повар Влад Пискунов'}, {name: 'Кафе-Пушкинъ', autor: 'Шеф повар Андрей Махов'}, {name: 'Кафе-Пушкинъ', autor: 'Шеф повар Андрей Махов'}]
+                    .cases__item
+                        .cases__video
+                            .video__wrapper.js-youtube#OuOXvavAy1c
+                        .cases__label Ресторан
+                        .cases__name=slide.name
+                        .cases__autor=slide.autor
+
+
+    // end cases
+
+    // begin catalog
+    section#catalog.catalog.section
+        .container_center
+            .catalog__content
+                picture.catalog__pict
+                    img(src="img/story.jpg" alt="")
+                .catalog__right
+                    h2.catalog__title Лицо ресторана – это не только интерьер и меню
+                    .catalog__text
+                        p Впечатляйте ваших гостей звуками, запахами, подачей. И они запомнят вас. Сделают фото и поделятся с друзьями.
+                        p А наша задача сделать так, чтобы сомнений, где это фото сделано не оставалось.
+                    .catalog__action
+                        a.btn(href="#") Перейти в каталог 
+                            i.icon_link
+                        a.btn.btn_border(href="#") Бесплатный подбор
+
+
+            // begin catalog__slider
+            .catalog__slider
+                each item in ['', '', '', '', '', '']
+                    .catalog__item
+                        .catalog__img
+                            img(src="img/cat.jpg", alt="")
+                        .catalog__info
+                            .catalog__name Ресторан Le Faham 
+                                .catalog__rate
+                                    img(src="img/like.png", alt="")
+                                    img(src="img/like.png", alt="")
+                            .catalog__city Париж
+                            .catalog__cat Посуда Degrenne — 
+                            a.catalog__link(href="#", target="_blank") L White Dewdrops
+                                i.icon_link
+
+            // end catalog__slider
+
+    // end catalog
+
+    // begin contact
+    section#contact.contact.section
+        .container_center
+            h2.contact__title связаться
+            .contact__link
+                a(href="tel: +7 (495) 111-23-44")
+                    i.icon_phone 
+                    | +7 (495) 111-23-44
+                a(href="mailto: mail@mail.com")
+                    i.icon_mail 
+                    | mail@mail.com
+                a(href="https://wa.me/74951112344")
+                    i.icon_whatsapp
+                    | Watsapp
+            .contact__content
+                .contact__img
+                    img(src="img/contact.jpg", alt="")
+                .contact__form
+                    form.form(action="")
+                        .form__row
+                            input(type="text", placeholder="Имя")
+                        .form__row
+                            input(type="text", placeholder="E-mail")
+                        .form__row
+                            input(type="text", placeholder="Телефон")
+                        .form__row
+                            textarea(placeholder="Сообщение")
+                        .form__info Нажимая на кнопку  «Отправить»,  я даю свое согласие на обработку персональных данных
+                        .form__action
+                            button.btn(type="submit") Отправить
+
+    // end contact

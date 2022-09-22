@@ -35,12 +35,19 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 7.2em;
-		height: 7.2em;
-		margin-top: -3.6em;
-		margin-left: -3.6em;
-		border-radius: 50%;
+		width: 2em;
+		height: auto;
+		transition: transform 0.4s;
+		transform: translate(-50%, -50%) scale(1);
 		cursor: pointer;
-		// background-color: #f00;
+
+		@media (min-width: 768px) {
+			width: 3.5em;
+			height: 2.875em;
+		}
+
+		&:hover {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
 	}
 }
